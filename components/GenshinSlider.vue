@@ -9,15 +9,18 @@
 <style module>
   .sliderParent {
     display: flex;
+    align-items: center;
     gap: 16px;
-    margin: 1em;
-    background-color: #f1e9ac;
-    padding: 1em 2em;
+    background-color: rgb(233, 220, 202);
+    padding: 0.8em 2em;
     border-radius: 999px;
+    color: rgb(83, 93, 108);
+    height: 2em;
   }
 
   .sliderParent > span {
     width: 100%;
+    margin-bottom: -3px; /* Stupid hack required to get the font to align properly */
   }
 
   .sliderParent > input {
