@@ -1,0 +1,21 @@
+.genshinSlider::-webkit-slider-thumb {
+  appearance: none;
+  @apply rounded-full bg-genshin-slider-dot outline outline-2 outline-black/50;
+  width: 15px;
+  height: 15px;
+  margin-top: -2.5px;
+}
+
+.genshinSlider::-webkit-slider-runnable-track {
+  @apply bg-genshin-slider-bg rounded-full;
+  height: 10px;
+}
+
+.genshinSlider::-moz-range-progress {
+  @apply bg-genshin-slider-active
+}
+
+.genshinSlider {
+  appearance: none;
+  background-color: transparent;
+}

@@ -15,6 +15,9 @@ const config: Config = {
       colors: {
         "genshin-menu-bg": "rgb(234, 230, 213)",
         "genshin-text": "rgb(85, 95, 111)",
+        "genshin-slider-active": "rgb(245, 241, 231)",
+        "genshin-slider-bg": "rgb(128, 123, 115)",
+        "genshin-slider-dot": "rgb(236, 229, 216)"
       },
     },
   },
