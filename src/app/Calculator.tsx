@@ -13,13 +13,14 @@ export default function Calculator() {
   const [skill, setSkill] = useState(0)
   const [introvert, setIntrovert] = useState(0)
   const [extrovert, setExtrovert] = useState(0)
+  const [selfDriven, setSelfDriven] = useState(0)
   const [thinking, setThinking] = useState(0)
   const [feeling, setFeeling] = useState(0)
   const [protective, setProtective] = useState(0)
 
   return (
-    <div className="flex flex-row gap-4">
-      <div className="flex flex-col gap-4 flex-1">
+    <div className="flex flex-row gap-16">
+      <div className="flex flex-col gap-4 flex-1 min-w-96">
         <GenshinSlider label="Stability" setValue={setStability} />
         <GenshinSlider label="Internal Conflict" setValue={setInternalConflict} />
         <GenshinSlider label="Sacrifice" setValue={setSacrifice} />
@@ -28,13 +29,14 @@ export default function Calculator() {
         <GenshinSlider label="Skill" setValue={setSkill} />
         <GenshinSlider label="Introvertedness" setValue={setIntrovert} />
         <GenshinSlider label="Extrovertedness" setValue={setExtrovert} />
+        <GenshinSlider label="Self Motivation" setValue={setSelfDriven} />
         <GenshinSlider label="Thinking" setValue={setThinking} />
         <GenshinSlider label="Feeling" setValue={setFeeling} />
         <GenshinSlider label="Protectiveness" setValue={setProtective} />
       </div>
-      <div className="flex-1">
+      <div className="min-w-64">
         <h2>Ranking:</h2>
-        <Ranking values={[stability, internalConflict, sacrifice, energy, loss, skill, introvert, extrovert, thinking, feeling, protective]} />
+        <Ranking values={[stability, internalConflict, sacrifice, energy, loss, skill, introvert, extrovert, selfDriven, thinking, feeling, protective]} />
       </div>
     </div>
   )
