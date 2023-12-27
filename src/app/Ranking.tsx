@@ -1,10 +1,19 @@
 import Image from "next/image";
 import generateRankings from "./generateRankings";
-import { useRef } from "react";
-import { exportComponentAsJPEG } from "react-component-export-image";
+import { useEffect, useRef } from "react";
 
 export default function Ranking({ values }: { values: number[] }) {
   const resultsRef = useRef<HTMLDivElement>(null)
+
+  const exportImageRef = useRef<any>(null);
+
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      import('react-component-export-image').then(
+        module => (exportImageRef.current = module)
+      )
+    }
+  }, [])
 
   return (
     <div>
@@ -26,7 +35,7 @@ export default function Ranking({ values }: { values: number[] }) {
       <div>
         <button
           className="bg-genshin-menu-bg px-6 py-3 rounded-full text-genshin-text"
-          onClick={() => exportComponentAsJPEG(resultsRef)}
+          onClick={() => exportImageRef.current?.exportComponentAsJPEG(resultsRef)}
         ><p className="mb-[-3px]">Save Image</p></button>
       </div>
     </div>
