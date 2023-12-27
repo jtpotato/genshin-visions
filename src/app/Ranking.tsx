@@ -24,7 +24,7 @@ export default function Ranking({ values }: { values: number[] }) {
             {generateRankings(values).map((element, index) => (
               <div key={element[0]} className="flex items-center gap-4">
                 <p className="mb-[-3px]">{index + 1}.</p>
-                <Image width={40} height={40} src={`/visions/${element[0]}.png`} alt={element[0]} />
+                <Image width={40} height={40} src={`${process.env.RUN_MODE != "dev" ? "/genshin-visions" : ""}/visions/${element[0]}.png`} alt={element[0]} />
                 <p className="mb-[-3px]">{element[0][0].toUpperCase() + element[0].slice(1)}</p>
               </div>
             ))}
