@@ -2,7 +2,7 @@
 
 import { useRef } from "react"
 
-export default function GenshinSlider({ label, setValue }: { label: String, setValue }) {
+export default function GenshinSlider({ label, setValue }: { label: String, setValue: any }) {
   const inputRef = useRef<HTMLInputElement>(null)
   function updateValue() {
     setValue(inputRef.current?.valueAsNumber)

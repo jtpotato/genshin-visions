@@ -19,7 +19,7 @@ export default function Calculator() {
   const [protective, setProtective] = useState(0)
 
   return (
-    <div className="flex flex-row gap-16">
+    <div className="flex flex-row gap-16 mt-8">
       <div className="flex flex-col gap-4 flex-1 min-w-96">
         <GenshinSlider label="Stability" setValue={setStability} />
         <GenshinSlider label="Internal Conflict" setValue={setInternalConflict} />
@@ -35,7 +35,6 @@ export default function Calculator() {
         <GenshinSlider label="Protectiveness" setValue={setProtective} />
       </div>
       <div className="min-w-64">
-        <h2>Ranking:</h2>
         <Ranking values={[stability, internalConflict, sacrifice, energy, loss, skill, introvert, extrovert, selfDriven, thinking, feeling, protective]} />
       </div>
     </div>
