@@ -1,0 +1,12 @@
+.pageBackground {
+  width: 120vw;
+  height: 120vh;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: -10vh;
+  left: -10vw;
+  z-index: -1;
+
+  @apply blur-md;
+}
