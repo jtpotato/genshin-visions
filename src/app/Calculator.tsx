@@ -21,7 +21,7 @@ export default function Calculator() {
   return (
     <div className="flex flex-row gap-16 mt-8">
       <div className="flex flex-col gap-4 flex-1 min-w-96">
-        <GenshinSlider label="Stability" setValue={setStability} />
+        <GenshinSlider label="Mental Stability" setValue={setStability} />
         <GenshinSlider label="Internal Conflict" setValue={setInternalConflict} />
         <GenshinSlider label="Sacrifice" setValue={setSacrifice} />
         <GenshinSlider label="Energy" setValue={setEnergy} />
