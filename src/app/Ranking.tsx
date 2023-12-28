@@ -1,6 +1,7 @@
 import Image from "next/image";
 import generateRankings from "./generateRankings";
 import { useEffect, useRef } from "react";
+import styles from "./ranking.module.css"
 
 export default function Ranking({ values }: { values: number[] }) {
   const resultsRef = useRef<HTMLDivElement>(null)
@@ -18,7 +19,7 @@ export default function Ranking({ values }: { values: number[] }) {
   return (
     <div>
       <div className="border">
-        <div ref={resultsRef} className="p-8">
+        <div ref={resultsRef} className={"p-8 " + styles.resultsPane}>
           <h2>My Vision:</h2>
           <div className="ml-4">
             {generateRankings(values).map((element, index) => (
@@ -35,7 +36,7 @@ export default function Ranking({ values }: { values: number[] }) {
       <div>
         <button
           className="bg-genshin-menu-bg px-6 py-3 rounded-full text-genshin-text"
-          onClick={() => exportImageRef.current?.exportComponentAsJPEG(resultsRef)}
+          onClick={() => exportImageRef.current?.exportComponentAsJPEG(resultsRef, { html2CanvasOptions: { allowTaint: true, useCORS: true, backgroundColor: "black" } })}
         ><p className="mb-[-3px]">Save Image</p></button>
       </div>
     </div>

@@ -11,7 +11,7 @@ export default function Home() {
         <p className="max-w-[40rem] text-neutral-400">It's like a personality test but with really poorly written documentation. It's up to you to figure out what each number is for :)</p>
         <Calculator />
       </main>
-      <div className={styles.pageBackground} style={{ backgroundImage: "url('/images/Liyue.webp')" }}>
+      <div className={styles.pageBackground} style={{ backgroundImage: `url('${process.env.RUN_MODE != "dev" ? "/genshin-visions" : ""}/images/Liyue.webp')` }}>
 
       </div>
     </div>
