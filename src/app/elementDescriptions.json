@@ -1,3 +1,9 @@
 {
-
+  "pyro": ["passionate", "energetic", "optimistic", "a bit impulsive", "trailblazer", "calculated", "composed"],
+  "cryo": ["most likely depressed", "determined", "calm", "analytical", "disciplined", "adaptable", "open"],
+  "electro": ["rebellious", "independent", "unpredictable", "resourceful", "direct", "loyal", "cooperative"],
+  "dendro": ["curious", "observant", "compassionate", "patient", "adaptable", "peaceful", "cynical"],
+  "hydro": ["shockingly efficient", "skilled", "empathetic", "manipulative", "creative", "indecisive", "hyperactive"],
+  "geo": ["reliable", "practical", "patient", "persistent", "disciplined", "reclusive", "unstable"],
+  "anemo": ["free-spirited (while also maybe burdened)", "playful", "optmistic", "experienced", "restless", "apathetic", "withdrawn"]
 }

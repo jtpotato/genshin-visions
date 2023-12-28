@@ -34,7 +34,7 @@ export default function Calculator() {
         <GenshinSlider label="Feeling" setValue={setFeeling} />
         <GenshinSlider label="Protectiveness" setValue={setProtective} />
       </div>
-      <div className="min-w-64">
+      <div className="min-w-64 flex-1">
         <Ranking values={[stability, internalConflict, sacrifice, energy, loss, skill, introvert, extrovert, selfDriven, thinking, feeling, protective]} />
       </div>
     </div>
