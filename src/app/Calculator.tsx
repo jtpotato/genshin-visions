@@ -19,7 +19,7 @@ export default function Calculator() {
   const [protective, setProtective] = useState(0)
 
   return (
-    <div className="flex flex-row gap-16 mt-8">
+    <div className="flex flex-row gap-16 my-8">
       <div className="flex flex-col gap-4 flex-1 min-w-96">
         <GenshinSlider label="Mental Stability" setValue={setStability} />
         <GenshinSlider label="Internal Conflict" setValue={setInternalConflict} />
