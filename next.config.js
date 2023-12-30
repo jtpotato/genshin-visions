@@ -1,10 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  basePath: process.env.RUN_MODE == "dev" ? "" : "/genshin-visions",
-  images: {
-    unoptimized: true
-  }
+  basePath: process.env.RUN_MODE == "dev" ? "" : "/genshin-visions"
 }
 
 module.exports = nextConfig
